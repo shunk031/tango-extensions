@@ -2877,9 +2877,10 @@ docs = ["furo", "jaraco.packaging (>=9.3)", "jaraco.tidelift (>=1.4)", "rst.link
 testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "pytest (>=6)", "pytest-black (>=0.3.7)", "pytest-checkdocs (>=2.4)", "pytest-cov", "pytest-enabler (>=2.2)", "pytest-ignore-flaky", "pytest-mypy (>=0.9.1)", "pytest-ruff"]
 
 [extras]
+all = ["diffusers"]
 diffusers = ["diffusers"]
 
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9"
-content-hash = "f0b4d1d923176e83a2ad6fac7cf936f54c34596fd369c31a7bb4ad350bb0cd2c"
+content-hash = "b1d15350b796511d124f3c964d6a57402c0a89fc8dffe0daf80d451b583de6a5"
