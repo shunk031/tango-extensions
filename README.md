@@ -27,6 +27,12 @@ To install with all integrations, run:
 pip install 'tango-extensions[all]'
 ```
 
+## Available Extensions
+
+| Extension name | Integration path | Details |
+|----------------|------------------|---------|
+| [`huggingface/diffusers`](https://github.com/huggingface/diffusers) | [tango_ext/integrations/diffusers](https://github.com/shunk031/tango-extensions/tree/master/tango_ext/integrations/diffusers) | [diffusers/format](https://github.com/shunk031/tango-extensions/blob/master/tango_ext/integrations/diffusers/format.py)
+
 ## Acknowledgements
 
 - allenai/tango: Organize your experiments into discrete steps that can be cached and reused throughout the lifetime of your research project. https://github.com/allenai/tango 
