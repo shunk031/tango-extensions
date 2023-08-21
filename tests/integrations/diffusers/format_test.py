@@ -58,7 +58,7 @@ class TestDiffusersPipelineFormat(TangoExtentionsTestCase):
             pipeline_model_id, revision=revision, torch_dtype=torch_dtype
         )
 
-        pipeline_format = DiffusersPipeline[pipeline_cls](pipeline_cls=pipeline_cls)
+        pipeline_format = DiffusersPipeline(pipeline_cls=pipeline_cls)
         pipeline_format.write(artifact=pipeline, dir=self.TEST_DIR)
 
         assert (self.TEST_DIR / "pipeline").exists()
