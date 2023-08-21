@@ -16,7 +16,16 @@ class DiffusersPipeline(Format[T], Generic[T]):
         super().__init__()
         self.pipeline_cls = pipeline_cls or StableDiffusionPipeline
 
+    def _check(self, artifact: T) -> None:
+        if not isinstance(artifact, self.pipeline_cls):
+            raise ValueError(
+                f"Invalid pipeline type: {type(artifact)}. "
+                f"Expected: {self.pipeline_cls}."
+            )
+
     def write(self, artifact: T, dir: PathOrStr) -> None:
+        self._check(artifact=artifact)
+
         filename = Path(dir) / "pipeline"
         artifact.save_pretrained(filename)  # type: ignore
 
