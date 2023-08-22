@@ -10,7 +10,7 @@ from diffusers import (
 )
 
 from tango_ext.common.testing import TangoExtentionsTestCase
-from tango_ext.integrations.diffusers import DiffusersPipeline
+from tango_ext.integrations.diffusers import DiffusersPipelineFormat
 
 
 class TestDiffusersPipelineFormat(TangoExtentionsTestCase):
@@ -33,7 +33,7 @@ class TestDiffusersPipelineFormat(TangoExtentionsTestCase):
             model_id, revision=revision, torch_dtype=torch_dtype
         )
 
-        pipeline_format = DiffusersPipeline[StableDiffusionPipeline]()
+        pipeline_format = DiffusersPipelineFormat[StableDiffusionPipeline]()
         pipeline_format.write(artifact=pipeline, dir=self.TEST_DIR)  # type: ignore
 
         assert (self.TEST_DIR / "pipeline").exists()
@@ -58,7 +58,7 @@ class TestDiffusersPipelineFormat(TangoExtentionsTestCase):
             pipeline_model_id, revision=revision, torch_dtype=torch_dtype
         )
 
-        pipeline_format = DiffusersPipeline(pipeline_cls=pipeline_cls)
+        pipeline_format = DiffusersPipelineFormat(pipeline_cls=pipeline_cls)
         pipeline_format.write(artifact=pipeline, dir=self.TEST_DIR)
 
         assert (self.TEST_DIR / "pipeline").exists()

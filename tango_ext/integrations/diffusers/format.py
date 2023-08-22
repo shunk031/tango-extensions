@@ -9,7 +9,7 @@ T = TypeVar("T")
 
 
 @Format.register("diffuers::pipeline")
-class DiffusersPipeline(Format[T], Generic[T]):
+class DiffusersPipelineFormat(Format[T], Generic[T]):
     VERSION: str = "001"
 
     def __init__(self, pipeline_cls: Optional[Type[T]] = None) -> None:
