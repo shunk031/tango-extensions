@@ -31,7 +31,8 @@ pip install 'tango-extensions[all]'
 
 | Extension name | Integration path | Details |
 |----------------|------------------|---------|
-| [`huggingface/diffusers`](https://github.com/huggingface/diffusers) | [tango_ext/integrations/diffusers](https://github.com/shunk031/tango-extensions/tree/master/tango_ext/integrations/diffusers) | [diffusers/format](https://github.com/shunk031/tango-extensions/blob/master/tango_ext/integrations/diffusers/format.py)
+| [`huggingface/diffusers`](https://github.com/huggingface/diffusers) | [tango_ext/integrations/diffusers](https://github.com/shunk031/tango-extensions/tree/master/tango_ext/integrations/diffusers) | [diffusers/format](https://github.com/shunk031/tango-extensions/blob/master/tango_ext/integrations/diffusers/format.py) |
+| [`albumentations-team/albumentations`](https://github.com/albumentations-team/albumentations) | [tango_ext/integrations/albumentations](https://github.com/shunk031/tango-extensions/tree/master/tango_ext/integrations/albumentations) |
 
 ## Acknowledgements
 
