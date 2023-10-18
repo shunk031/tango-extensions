@@ -15,11 +15,11 @@ class AlbumentationsParams(Params, Registrable):
 
     @classmethod
     def get_class_fullname(cls) -> str:
-        return "RegistrableAlbumentationsParams"
+        return cls.__name__
 
 
 for name, cls in composition.__dict__.items():
     if isinstance(cls, type) and issubclass(cls, BaseCompose) and cls != BaseCompose:
         AlbumentationsCompose.register("albumentations::" + name)(cls)
-    elif isinstance(cls, type) and issubclass(cls, AlbumentationsParams):
+    elif isinstance(cls, type) and issubclass(cls, Params):
         AlbumentationsParams.register("albumentations::" + name)(cls)

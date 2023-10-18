@@ -5,5 +5,6 @@ try:
 except ModuleNotFoundError:
     raise IntegrationMissingError("albumentations")
 
+
 from .core import *  # NOQA
-from .augmentations import *  # NOQA
+from .transforms import *  # NOQA
