@@ -19,6 +19,10 @@ To install with a specific integration, such as [`diffusers`](https://github.com
 
 ```shell
 pip install 'tango-extensions[diffusers]'
+pip install 'tango-extensions[albumentations]'
+
+# install both diffusers and albumentations extensions
+pip install 'tango-extensions[diffusers, albumentations]'
 ```
 
 To install with all integrations, run:
