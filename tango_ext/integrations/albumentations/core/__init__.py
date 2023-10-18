@@ -1,1 +1,2 @@
-from .composition import AlbumentationsParams, AlbumentationsBaseCompose  # NOQA
+from .composition import AlbumentationsBaseCompose  # NOQA
+from .utils import AlbumentationsParams  # NOQA

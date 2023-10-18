@@ -7,7 +7,7 @@ from tango_ext.integrations.albumentations import (
 
 class TestComposition(TangoExtentionsTestCase):
     def test_all_compotisions_registered(self):
-        assert len(AlbumentationsBaseCompose.list_available()) == 7
+        assert len(AlbumentationsBaseCompose.list_available()) == 6
 
     def test_composition(self):
         assert "albumentations::Compose" in AlbumentationsBaseCompose.list_available()
