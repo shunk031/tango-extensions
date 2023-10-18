@@ -3799,10 +3799,10 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 
 [extras]
 albumentations = ["albumentations", "torchvision"]
-all = ["accelerate", "albumentations", "diffusers", "torch"]
+all = ["accelerate", "albumentations", "diffusers", "torch", "torchvision"]
 diffusers = ["accelerate", "diffusers", "torch"]
 
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9"
-content-hash = "8368fbbf8d2258c7ae1c9b1915f0bbfb7086d0ffb80c689ed6ee4fb7a7b7e78f"
+content-hash = "a92da11aca2dc1a7e4f452903bbcc10830460eabb09727e05798714bf61a9d2c"
