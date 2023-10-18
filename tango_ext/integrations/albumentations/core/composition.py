@@ -1,6 +1,6 @@
 from albumentations.core import composition
 from albumentations.core.composition import BaseCompose
-from albumentations.core.utils import Params as AlbumentationsParams
+from albumentations.core.utils import Params
 from tango.common import Registrable
 
 
@@ -8,7 +8,7 @@ class AlbumentationsCompose(BaseCompose, Registrable):
     pass
 
 
-class AlbumentationsParams(AlbumentationsParams, Registrable):
+class AlbumentationsParams(Params, Registrable):
     @classmethod
     def is_serializable(cls) -> bool:
         return True
