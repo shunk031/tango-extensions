@@ -1,16 +1,16 @@
 from tango_ext.common.testing import TangoExtentionsTestCase
 from tango_ext.integrations.albumentations import (
-    AlbumentationsCompose,
+    AlbumentationsBaseCompose,
     AlbumentationsParams,
 )
 
 
 class TestComposition(TangoExtentionsTestCase):
     def test_all_compotisions_registered(self):
-        assert len(AlbumentationsCompose.list_available()) == 7
+        assert len(AlbumentationsBaseCompose.list_available()) == 7
 
     def test_composition(self):
-        assert "albumentations::Compose" in AlbumentationsCompose.list_available()
+        assert "albumentations::Compose" in AlbumentationsBaseCompose.list_available()
 
     def test_all_params_registered(self):
         assert len(AlbumentationsParams.list_available()) == 2

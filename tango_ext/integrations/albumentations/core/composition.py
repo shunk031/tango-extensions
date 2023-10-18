@@ -4,7 +4,7 @@ from albumentations.core.utils import Params
 from tango.common import Registrable
 
 
-class AlbumentationsCompose(BaseCompose, Registrable):
+class AlbumentationsBaseCompose(BaseCompose, Registrable):
     pass
 
 
@@ -20,6 +20,6 @@ class AlbumentationsParams(Params, Registrable):
 
 for name, cls in composition.__dict__.items():
     if isinstance(cls, type) and issubclass(cls, BaseCompose) and cls != BaseCompose:
-        AlbumentationsCompose.register("albumentations::" + name)(cls)
+        AlbumentationsBaseCompose.register("albumentations::" + name)(cls)
     elif isinstance(cls, type) and issubclass(cls, Params):
         AlbumentationsParams.register("albumentations::" + name)(cls)
