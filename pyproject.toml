@@ -25,7 +25,7 @@ albumentations = { version = ">=1.0.0", optional = true }
 [tool.poetry.extras]
 diffusers = ["diffusers", "accelerate", "torch"]
 albumentations = ["albumentations", "torchvision"]
-all = ["diffusers", "accelerate", "torch", "albumentations"]
+all = ["diffusers", "accelerate", "torch", "albumentations", "torchvision"]
 
 [tool.poetry.group.dev.dependencies]
 ruff = "^0.0.285"
